@@ -12,7 +12,7 @@ export default {
     const headerPhotoComp = document.querySelector('.component-header-photo');
     const headerNameComp = document.querySelector('.component-header-name');
 
-    headerPhotoComp.style.backgroundImage = `url('${friend.photo}')`;
+    headerPhotoComp.style.backgroundImage = `url('${friend.photo_50}')`;
     headerNameComp.innerText = `${friend.first_name ?? ''} ${friend.last_name ?? ''}`;
     photoComp.style.backgroundImage = `url(${url})`;
   },

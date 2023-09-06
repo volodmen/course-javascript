@@ -92,7 +92,7 @@ getPhotos(owner){
 photoCache: {},
 
 async getFriendPhotos(id) {
-  const photos = this.photoCache[id];
+  let photos = this.photoCache[id];
 
   if (photos) {
     return photos;
