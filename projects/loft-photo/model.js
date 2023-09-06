@@ -1,6 +1,6 @@
 const PERM_FRIENDS = 2;
 const PERM_PHOTOS = 4;
-const APP_ID = poiuytrewl;
+const APP_ID = 51742122;
 
 export default {
   getRandomElement(array) {
@@ -13,7 +13,7 @@ export default {
     return array[index];
   },
   async getNextPhoto() {
-    const friend = this.getRandomElement(this.getFriendPhotos.items);
+    const friend = this.getRandomElement(this.friends.items);
     const photos = await this.getFriendPhotos(friend.id);
     const photo = this.getRandomElement(photos.items);
     const size = this.findSize(photo);
@@ -98,7 +98,7 @@ async getFriendPhotos(id) {
     return photos;
   }
 
-  photos = await this.getFriendPhotos(id);
+  photos = await this.getPhotos(id);
 
   this.photoCache[id] = photos;
 
@@ -106,4 +106,3 @@ async getFriendPhotos(id) {
 },
 
 };
-
